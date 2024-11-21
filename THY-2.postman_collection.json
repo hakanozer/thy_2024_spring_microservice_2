@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "e5ee081e-fa30-44d7-9039-71aa5612f82e",
+		"name": "THY-2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1939021"
+	},
+	"item": [
+		{
+			"name": "Product Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Pro-2\",\n    \"description\": \"Pro-2 Detail\",\n    \"price\": 65000,\n    \"city\": \"İstanbul\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1010/product/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1010",
+					"path": [
+						"product",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single Product",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ali",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1010/product/singleProduct/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1010",
+					"path": [
+						"product",
+						"singleProduct",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Basket Single Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1010/basket/singleProd/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1010",
+					"path": [
+						"basket",
+						"singleProd",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Basket Dummy All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/basket/productList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"basket",
+						"productList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Basket Product Save",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8091/basket/productSave",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"basket",
+						"productSave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save All Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n  \"title\": \"Sabrina\",\n  \"description\": \"Other specified acquired deformities of unspecified thigh\",\n  \"price\": 42,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Stay Tuned\",\n  \"description\": \"Recurrent and persistent hematuria with diffuse mesangial proliferative glomerulonephritis\",\n  \"price\": 74,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"71 Fragments of a Chronology of Chance (71 Fragmente einer Chronologie des Zufalls)\",\n  \"description\": \"Other specified injuries of left lower leg, initial encounter\",\n  \"price\": 52,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Do You Like Hitchcock? (Ti piace Hitchcock?)\",\n  \"description\": \"Nondisplaced fracture of pisiform, left wrist, subsequent encounter for fracture with delayed healing\",\n  \"price\": 32,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"The Emperor's Club\",\n  \"description\": \"Bitten by raccoon\",\n  \"price\": 41,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"G Men\",\n  \"description\": \"Exposure to high air pressure from rapid descent in water, initial encounter\",\n  \"price\": 3,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Kuroneko (Black Cat from the Grove, The) (Yabu no naka no kuroneko)\",\n  \"description\": \"Brazilian pemphigus [fogo selvagem]\",\n  \"price\": 98,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Three Smart Girls\",\n  \"description\": \"Unspecified complication of foreign body accidentally left in body following endoscopic examination, sequela\",\n  \"price\": 36,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Black Gold\",\n  \"description\": \"Nondisplaced segmental fracture of shaft of right femur, initial encounter for open fracture type I or II\",\n  \"price\": 88,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Fat Albert\",\n  \"description\": \"Poisoning by unspecified topical agent, accidental (unintentional), sequela\",\n  \"price\": 11,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Zincirbozan\",\n  \"description\": \"Other mental disorders complicating pregnancy, first trimester\",\n  \"price\": 22,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Thy Womb (Sinapupunan)\",\n  \"description\": \"Driver of bus injured in collision with fixed or stationary object in nontraffic accident, initial encounter\",\n  \"price\": 83,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Eight Crazy Nights (Adam Sandler's Eight Crazy Nights)\",\n  \"description\": \"Superficial foreign body of right elbow\",\n  \"price\": 62,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Children of Invention\",\n  \"description\": \"Toxic effect of contact with venomous toad, undetermined, subsequent encounter\",\n  \"price\": 28,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Panic Button\",\n  \"description\": \"Other internal derangements of knee\",\n  \"price\": 1,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Heima\",\n  \"description\": \"Other specified disorders of bladder\",\n  \"price\": 34,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Tortured\",\n  \"description\": \"Unspecified car occupant injured in collision with two- or three-wheeled motor vehicle in nontraffic accident\",\n  \"price\": 60,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Never Make It Home\",\n  \"description\": \"Insect bite (nonvenomous) of scalp\",\n  \"price\": 13,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Gypsy Moths, The\",\n  \"description\": \"Toxic effect of tetrachloroethylene, accidental (unintentional), sequela\",\n  \"price\": 2,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Music Lovers, The\",\n  \"description\": \"Unspecified occupant of bus injured in collision with other nonmotor vehicle in nontraffic accident\",\n  \"price\": 96,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"I Hate Mondays, (Nie lubie poniedzialku)\",\n  \"description\": \"Other paralytic syndrome following other cerebrovascular disease, bilateral\",\n  \"price\": 14,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Times Square\",\n  \"description\": \"Adverse effect of other viral vaccines, sequela\",\n  \"price\": 54,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Manny\",\n  \"description\": \"Toxic effect of other pesticides\",\n  \"price\": 34,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Mr. Jones\",\n  \"description\": \"Myositis ossificans progressiva, unspecified forearm\",\n  \"price\": 10,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Strike Up the Band\",\n  \"description\": \"Terrorism involving chemical weapons, terrorist injured, sequela\",\n  \"price\": 75,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Time of Eve (Eve no jikan)\",\n  \"description\": \"Dislocation of unspecified parts of left shoulder girdle\",\n  \"price\": 47,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Unholy Wife, The\",\n  \"description\": \"Nondisplaced fracture of proximal phalanx of right great toe\",\n  \"price\": 82,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Grotesque (Gurotesuku)\",\n  \"description\": \"Injury of median nerve at forearm level, right arm\",\n  \"price\": 12,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Few of Us\",\n  \"description\": \"Incomplete lesion of L1 level of lumbar spinal cord\",\n  \"price\": 45,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Bedknobs and Broomsticks\",\n  \"description\": \"Nondisplaced fracture of triquetrum [cuneiform] bone, left wrist, subsequent encounter for fracture with malunion\",\n  \"price\": 9,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Dragon ball Z 04: Lord Slug\",\n  \"description\": \"Adverse effect of phenothiazine antipsychotics and neuroleptics, subsequent encounter\",\n  \"price\": 24,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Benchwarmers, The\",\n  \"description\": \"Nondisplaced transverse fracture of unspecified patella\",\n  \"price\": 22,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"When Ladies Meet\",\n  \"description\": \"Other specified abnormal uterine and vaginal bleeding\",\n  \"price\": 98,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Full Tilt Boogie\",\n  \"description\": \"Other specified dorsopathies\",\n  \"price\": 72,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Pentagon Wars, The\",\n  \"description\": \"Slipping, tripping and stumbling without falling due to stepping from one level to another, sequela\",\n  \"price\": 37,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Mister Lonely\",\n  \"description\": \"Age-related osteoporosis with current pathological fracture, femur\",\n  \"price\": 28,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Savage Innocents, The\",\n  \"description\": \"Crushing injury of scrotum and testis, initial encounter\",\n  \"price\": 5,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Tenant, The (Locataire, Le)\",\n  \"description\": \"Open bite of unspecified toe(s) with damage to nail, initial encounter\",\n  \"price\": 28,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Hatfields & McCoys\",\n  \"description\": \"Newborn affected by premature rupture of membranes\",\n  \"price\": 4,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Alien Nation: Dark Horizon\",\n  \"description\": \"Displaced fracture of olecranon process with intraarticular extension of unspecified ulna, subsequent encounter for closed fracture with malunion\",\n  \"price\": 49,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Great Sinner, The\",\n  \"description\": \"Puncture wound with foreign body of pharynx and cervical esophagus, initial encounter\",\n  \"price\": 87,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"King and the Clown, The (Wang-ui namja)\",\n  \"description\": \"Fracture of tooth (traumatic), subsequent encounter for fracture with nonunion\",\n  \"price\": 81,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Deaths of Ian Stone, The\",\n  \"description\": \"Unspecified foreign body in larynx causing asphyxiation, sequela\",\n  \"price\": 72,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"King and the Clown, The (Wang-ui namja)\",\n  \"description\": \"Other subluxation of left ulnohumeral joint, initial encounter\",\n  \"price\": 84,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Emperor's New Clothes, The\",\n  \"description\": \"Unspecified fracture of first thoracic vertebra, initial encounter for closed fracture\",\n  \"price\": 28,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Spy Who Loved Me, The\",\n  \"description\": \"Pathological fracture, left ulna, subsequent encounter for fracture with routine healing\",\n  \"price\": 97,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Blue Umbrella, The\",\n  \"description\": \"Unspecified injury of extensor muscle, fascia and tendon of left middle finger at wrist and hand level, subsequent encounter\",\n  \"price\": 26,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"You're a Big Boy Now\",\n  \"description\": \"Solitary bone cyst, right humerus\",\n  \"price\": 42,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"The Garden of Sinners - Chapter 5: Paradox Paradigm\",\n  \"description\": \"Military base as the place of occurrence of the external cause\",\n  \"price\": 93,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Jim Norton: Please Be Offended\",\n  \"description\": \"Other exposure to controlled fire, not in building or structure, subsequent encounter\",\n  \"price\": 32,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"I, the Worst of All (Yo, la peor de todas)\",\n  \"description\": \"Unspecified kyphosis, thoracic region\",\n  \"price\": 40,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Double, The\",\n  \"description\": \"Unspecified injury of fallopian tube, unilateral\",\n  \"price\": 59,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Kingsman: The Secret Service\",\n  \"description\": \"Exposure to other specified factors, subsequent encounter\",\n  \"price\": 8,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Extraordinary Measures\",\n  \"description\": \"Other specified malignant neoplasm of skin of right ear and external auricular canal\",\n  \"price\": 64,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Different for Girls\",\n  \"description\": \"Laceration of other muscles, fascia and tendons at forearm level, left arm, subsequent encounter\",\n  \"price\": 98,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Avengers, The\",\n  \"description\": \"Injury of deep peroneal nerve at ankle and foot level, right leg, initial encounter\",\n  \"price\": 17,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Emperor of the North (Emperor of the North Pole)\",\n  \"description\": \"Other mechanical complication of unspecified vascular grafts\",\n  \"price\": 34,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Bright Lights (Adventures in Africa)\",\n  \"description\": \"Sprain of interphalangeal joint of right ring finger, initial encounter\",\n  \"price\": 21,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Running With Scissors\",\n  \"description\": \"Displaced segmental fracture of shaft of ulna, unspecified arm, sequela\",\n  \"price\": 7,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Sel8nne\",\n  \"description\": \"Minimally displaced Zone II fracture of sacrum\",\n  \"price\": 41,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Olsen Gang, The (Olsen-Banden)\",\n  \"description\": \"External constriction of unspecified external genital organs, male, initial encounter\",\n  \"price\": 73,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Starsky & Hutch\",\n  \"description\": \"Machinery accident on board unspecified watercraft, sequela\",\n  \"price\": 61,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Young and Innocent\",\n  \"description\": \"Superficial frostbite of left finger(s), initial encounter\",\n  \"price\": 13,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"1000 Journals\",\n  \"description\": \"Dislocation of L2/L3 lumbar vertebra\",\n  \"price\": 74,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Fort Bliss\",\n  \"description\": \"Supervision of pregnancy with history of infertility, second trimester\",\n  \"price\": 42,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Loose Change: Second Edition\",\n  \"description\": \"Placentitis, third trimester, fetus 5\",\n  \"price\": 75,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Professional, The (Le professionnel)\",\n  \"description\": \"Scleritis with corneal involvement, bilateral\",\n  \"price\": 20,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"a/k/a Tommy Chong\",\n  \"description\": \"Fatigue fracture of vertebra, occipito-atlanto-axial region, subsequent encounter for fracture with delayed healing\",\n  \"price\": 6,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Maria\",\n  \"description\": \"Other complications specific to multiple gestation, third trimester, fetus 1\",\n  \"price\": 57,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Beyond the Fear\",\n  \"description\": \"Flatback syndrome\",\n  \"price\": 96,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"The Bronze\",\n  \"description\": \"Inhalant dependence with other inhalant-induced disorders\",\n  \"price\": 83,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Tournament, The\",\n  \"description\": \"Encounter for other specified aftercare\",\n  \"price\": 64,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Albuquerque\",\n  \"description\": \"Exposure to radon\",\n  \"price\": 18,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Vizontele\",\n  \"description\": \"Pressure ulcer of left hip, unspecified stage\",\n  \"price\": 15,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"À nous la liberté (Freedom for Us)\",\n  \"description\": \"Nondisplaced other extraarticular fracture of right calcaneus, subsequent encounter for fracture with malunion\",\n  \"price\": 69,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Zulu Dawn\",\n  \"description\": \"Pre-existing hypertension complicating pregnancy, childbirth and the puerperium\",\n  \"price\": 7,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Space Milkshake\",\n  \"description\": \"Secondary malignant neoplasm of other parts of nervous system\",\n  \"price\": 25,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Goldene Zeiten\",\n  \"description\": \"Erectile dysfunction following interstitial seed therapy\",\n  \"price\": 75,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"A Cinderella Story: Once Upon a Song\",\n  \"description\": \"Other infective otitis externa, bilateral\",\n  \"price\": 7,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Cat People\",\n  \"description\": \"Nondisplaced fracture of head of right radius, sequela\",\n  \"price\": 85,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Tribes\",\n  \"description\": \"Car passenger injured in collision with pick-up in nontraffic accident\",\n  \"price\": 70,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Midnight in Paris\",\n  \"description\": \"Concussion with loss of consciousness of unspecified duration\",\n  \"price\": 77,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Quid Pro Quo\",\n  \"description\": \"Adverse effect of unspecified systemic antibiotic, sequela\",\n  \"price\": 93,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Moon Over Parador\",\n  \"description\": \"Osteolysis, left forearm\",\n  \"price\": 39,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Wedding, A\",\n  \"description\": \"Intentional self-harm by drowning and submersion after jump into swimming pool\",\n  \"price\": 57,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Silent Action\",\n  \"description\": \"Acute hepatitis B without delta-agent and without hepatic coma\",\n  \"price\": 75,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"5,000 Fingers of Dr. T, The\",\n  \"description\": \"Erythrasma\",\n  \"price\": 82,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Les modèles de 'Pickpocket'\",\n  \"description\": \"Epilepsy, unspecified, not intractable, with status epilepticus\",\n  \"price\": 16,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Texasville\",\n  \"description\": \"Passenger in pick-up truck or van injured in collision with heavy transport vehicle or bus in traffic accident, sequela\",\n  \"price\": 80,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"War\",\n  \"description\": \"Antepartum hemorrhage, unspecified\",\n  \"price\": 98,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Surveillance\",\n  \"description\": \"Disorders of autonomic nervous system\",\n  \"price\": 70,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Fireworks (Hana-bi)\",\n  \"description\": \"Absence epileptic syndrome\",\n  \"price\": 64,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Lakeboat\",\n  \"description\": \"Corrosion of third degree of right thumb (nail)\",\n  \"price\": 25,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Tell-Tale\",\n  \"description\": \"Temporary auditory threshold shift, unspecified ear\",\n  \"price\": 68,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Social Genocide (Memoria del saqueo)\",\n  \"description\": \"Laceration with foreign body of right forearm, subsequent encounter\",\n  \"price\": 9,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Page Turner, The (Tourneuse de pages, La)\",\n  \"description\": \"Finding of cocaine in blood\",\n  \"price\": 20,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Social Network, The\",\n  \"description\": \"Wedge compression fracture of fifth lumbar vertebra, sequela\",\n  \"price\": 45,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Pursuit of the Graf Spee (Battle of the River Plate, The)\",\n  \"description\": \"Unstable burst fracture of unspecified thoracic vertebra, subsequent encounter for fracture with nonunion\",\n  \"price\": 67,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"The Prince\",\n  \"description\": \"Chronic respiratory conditions due to chemicals, gases, fumes and vapors\",\n  \"price\": 86,\n  \"city\": \"İstanbul\"\n}, {\n  \"title\": \"Winnetou: The Red Gentleman\",\n  \"description\": \"Other specified crystal arthropathies, wrist\",\n  \"price\": 54,\n  \"city\": \"İstanbul\"\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/product/saveAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"product",
+						"saveAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/product/report?title=p",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"product",
+						"report"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "p"
+						},
+						{
+							"key": "description",
+							"value": "TV Detail",
+							"disabled": true
+						},
+						{
+							"key": "price",
+							"value": "5000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/product/list?pageNumber=11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"product",
+						"list"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mehmet\",\n    \"surname\": \"Bilsin\",\n    \"addresses\": [\n        {\"aid\": 1},\n        {\"aid\": 2},\n        {\"aid\": 3}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/product/customer/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"product",
+						"customer",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/product/customer/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"product",
+						"customer",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Encrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "sa",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2020/encrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2020",
+					"path": [
+						"encrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1010/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "f3cc3cc5-ec3c-4fec-ba45-b77c7d4f6024",
+							"type": "text"
+						},
+						{
+							"key": "_csrf",
+							"value": "Pg1AH6oaU12I4KytRL583e_D6iE4yomiCjDd28CGfjUeiEwtXzghLJksYj-l056bd5NIu9qnx0NdrLqPawG7vqW-GAMvuHRO",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1010/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1010",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"zehra\",\n    \"password\": \"12345\",\n    \"enabled\": true,\n    \"roles\": [\n        {\"rid\": 1},\n        {\"rid\": 2}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1010/customer/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1010",
+					"path": [
+						"customer",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
