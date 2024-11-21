@@ -13,9 +13,16 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return
                 http
-                        .csrf(Customizer.withDefaults())
-                        .formLogin(Customizer.withDefaults())
+                        .csrf( csrf -> csrf.disable() )
+                        .formLogin( formLogin -> formLogin.disable() )
                         .build();
     }
 
 }
+
+
+/*
+    ali -> product,
+    veli -> basket,
+    zehra -> product, basket
+ */
