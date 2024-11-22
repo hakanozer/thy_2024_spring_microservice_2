@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient("product")
 public interface IProduct {
 
-    @GetMapping("/product/singleProduct/{pid}")
+    @GetMapping("/product/singleProdu/{pid}")
     Product getProduct(@PathVariable long pid);
 
     @PostMapping("/product/save")

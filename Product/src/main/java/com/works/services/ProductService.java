@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,9 +17,11 @@ import java.util.Optional;
 public class ProductService {
 
     final ProductRepository productRepository;
+    final JmsTemplate jmsTemplate;
 
     public Product save(Product product) {
         productRepository.save(product);
+        jmsTemplate.convertAndSend("q1", product);
         return product;
     }
 

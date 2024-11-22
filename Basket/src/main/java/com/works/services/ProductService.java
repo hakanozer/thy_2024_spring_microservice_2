@@ -5,6 +5,8 @@ import com.works.ifeigns.IProduct;
 import com.works.models.Product;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreaker;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 import java.util.Random;
 import java.util.UUID;
+import java.util.function.Supplier;
 
 @Service
 @RequiredArgsConstructor
@@ -22,6 +25,8 @@ public class ProductService {
     final RestTemplate restTemplate;
     final IProduct iProduct;
     final IDummy iDummy;
+    final CircuitBreakerFactory circuitBreakerFactory;
+    final CircuitBreakerFactory globalCustomConfiguration;
 
     public Product singleProduct(long pid ) {
         /*
@@ -34,7 +39,18 @@ public class ProductService {
         }
         return null;
          */
-        return iProduct.getProduct(pid);
+        CircuitBreaker breaker = circuitBreakerFactory.create("breakerFactory");
+        return breaker.run(
+                 () -> iProduct.getProduct(pid),
+                 throwable -> fallBack(pid)
+        );
+    }
+
+    private Product fallBack(long pid) {
+        Product product = new Product();
+        product.setPid(-1l);
+        product.setTitle("Title");
+        return product;
     }
 
     public Product save() {
