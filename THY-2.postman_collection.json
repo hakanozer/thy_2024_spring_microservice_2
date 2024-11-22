@@ -9,11 +9,26 @@
 		{
 			"name": "Product Save",
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ali",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"Pro-2\",\n    \"description\": \"Pro-2 Detail\",\n    \"price\": 65000,\n    \"city\": \"İstanbul\"\n}",
+					"raw": "{\n    \"title\": \"Pro-3\",\n    \"description\": \"Pro-3 Detail\",\n    \"price\": 75000,\n    \"city\": \"İstanbul\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -74,6 +89,21 @@
 		{
 			"name": "Basket Single Product",
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "zehra",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -95,15 +125,30 @@
 		{
 			"name": "Basket Dummy All Products",
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "zehra",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8091/basket/productList",
+					"raw": "http://localhost:1010/basket/productList",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8091",
+					"port": "1010",
 					"path": [
 						"basket",
 						"productList"
