@@ -17,12 +17,12 @@ public class BasketRestController {
     final ProductService productService;
 
     @GetMapping("singleProd/{pid}")
-    public ResponseEntity<Product> singleProduct(@PathVariable long pid) {
+    public Product singleProduct(@PathVariable long pid) {
         return productService.singleProduct(pid);
     }
 
     @GetMapping("productSave")
-    public ResponseEntity<Product> productSave() {
+    public Product productSave() {
         return productService.save();
     }
 

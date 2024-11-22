@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface IProduct {
 
     @GetMapping("/product/singleProduct/{pid}")
-    ResponseEntity<Product> getProduct(@PathVariable long pid);
+    Product getProduct(@PathVariable long pid);
 
     @PostMapping("/product/save")
-    ResponseEntity<Product> saveProduct(@RequestBody Product product);
+    Product saveProduct(@RequestBody Product product);
 
 }

@@ -23,7 +23,7 @@ public class ProductService {
     final IProduct iProduct;
     final IDummy iDummy;
 
-    public ResponseEntity<Product> singleProduct(long pid ) {
+    public Product singleProduct(long pid ) {
         /*
         List<ServiceInstance> list = discoveryClient.getInstances("product");
         if (!list.isEmpty()) {
@@ -37,7 +37,7 @@ public class ProductService {
         return iProduct.getProduct(pid);
     }
 
-    public ResponseEntity<Product> save() {
+    public Product save() {
         Product product = new Product();
         product.setCity("İstanbul");
         product.setTitle(UUID.randomUUID().toString());
